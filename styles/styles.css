@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+html, boby{
+    height: 100vh;
+}
+body{
+    background-color: #191920;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: #fff;
+}
+form{
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 5px;
+    animation: aparecer 2s;
+    overflow: hidden;
+}
+form .inserir{
+    margin-bottom:  20px;
+    animation: campos 2.5s;
+}
+form .inserir label{
+    font-size: 25px;
+    color: #191920;
+}
+form .inserir input{
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccddef;
+    outline-color: #191920;
+}
+form .btnLogin{
+    display: block;
+    min-width: 120px;
+    border: 1px solid #000;
+    background-color: #2d2d2e;
+    border-radius: 25px;
+    color: #fff;
+    margin: auto;
+    font-size: 15px;
+    padding: 7px;
+}
+.btnLogin:hover{
+    cursor: pointer;
+    background-color: #1e1e1f;
+    transition: 1s ease-in-out;
+}
+.esconderForm{
+    animation: esconder 1s forwards;
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: scale(0.3)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+} 
+@keyframes campos {
+    from{
+        transform: translateX(-45%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes esconder {
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
